@@ -3,236 +3,99 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Form Pendaftaran</title>
-
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root{
-      --bg1:#0ea5e9;
-      --bg2:#a78bfa;
-      --text:#0f172a;
-      --muted:#64748b;
-      --line:#e2e8f0;
-      --primary:#2563eb;
-      --primary2:#7c3aed;
-      --danger:#ef4444;
-      --ring: rgba(37,99,235,.18);
-    }
-
-    body{
-      min-height: 100vh;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color: var(--text);
-      background: radial-gradient(1200px 600px at 10% 10%, rgba(255,255,255,.25), transparent 60%),
-                linear-gradient(135deg, var(--bg1), var(--bg2));
-      display: grid;
-      place-items: center;
-      padding: 28px 16px;
-    }
-
-    .form-container{
-      width: 100%;
-      max-width: 640px;
-      background: rgba(255,255,255,.88);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255,255,255,.45);
-      border-radius: 18px;
-      box-shadow: 0 18px 60px rgba(2,6,23,.22);
-      padding: 26px;
-    }
-
-    form h2{
-      font-size: 22px;
-      letter-spacing: .2px;
-      margin-bottom: 18px;
-    }
-
-    .form-group{ margin-bottom: 16px; }
-
-    .form-row{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
-
-    @media (max-width: 640px){
-      .form-container{ padding: 18px; }
-      .form-row{ grid-template-columns: 1fr; }
-    }
-
-    .form-label{
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 650;
-      font-size: 13px;
-      color: #1f2937;
-    }
-
-    .form-input,
-    .form-select,
-    .form-textarea{
-      width: 100%;
-      padding: 12px 14px;
-      font-size: 15px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background: #fff;
-      outline: none;
-      transition: box-shadow .2s ease, border-color .2s ease;
-    }
-
-    .form-input::placeholder{ color: #94a3b8; }
-
-    .form-input:focus,
-    .form-select:focus,
-    .form-textarea:focus{
-      border-color: rgba(37,99,235,.55);
-      box-shadow: 0 0 0 4px var(--ring);
-    }
-
-    .error-text{
-      display: none;
-      margin-top: 6px;
-      font-size: 12.5px;
-      color: var(--danger);
-    }
-    .form-input:invalid + .error-text{ display: block; }
-
-    input[type="radio"],
-    input[type="checkbox"]{
-      width: 16px;
-      height: 16px;
-      accent-color: var(--primary);
-    }
-
-    .form-group label{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-right: 14px;
-      color: #111827;
-      font-size: 14px;
-    }
-
-    .form-button{
-      width: 100%;
-      padding: 12px 14px;
-      border: 0;
-      border-radius: 12px;
-      font-weight: 700;
-      font-size: 15px;
-      cursor: pointer;
-      color: white;
-      background: linear-gradient(135deg, var(--primary), var(--primary2));
-      box-shadow: 0 12px 26px rgba(37,99,235,.28);
-      transition: transform .08s ease, filter .2s ease, box-shadow .2s ease;
-    }
-
-    .form-button:hover{
-      filter: brightness(1.03);
-      box-shadow: 0 16px 34px rgba(37,99,235,.34);
-    }
-
-    .form-button:active{ transform: translateY(2px); }
-
-    .form-button.secondary{
-      background: #e2e8f0;
-      color: #0f172a;
-      box-shadow: none;
-    }
-  </style>
+  <title>BIODATA DIRI</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <div class="form-container">
-    <form action="#" method="post" novalidate>
-      <h2>Form Pendaftaran</h2>
 
-      <div class="form-group">
-        <label for="nama" class="form-label">Nama</label>
-        <input type="text" id="nama" name="nama" class="form-input" placeholder="Tulis nama kamu" required />
-        <span class="error-text">Nama wajib diisi.</span>
+  <header class="header" id="home">
+    <div class="container header-inner">
+      <div>
+        <h1>BIODATA DIRI</h1>
+        <p class="subtitle">Website biodata Andri Dan Tugas</p>
+      </div>
+      <a class="badge" href="tugas.html" target="_blank" rel="noopener">Info Tugas Andri</a>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <div class="container nav-inner">
+      <div class="brand">Home</div>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#biodata">Biodata</a>
+        <a href="#kontak">Kontak</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="card profile" id="biodata">
+
+      <!-- FOTO (STATIS, TIDAK PERLU UPLOAD) -->
+      <div class="left">
+        <img class="avatar" src="foto.jpg" alt="Foto Andri FX">
+        
       </div>
 
-      <div class="form-group">
-        <label for="email" class="form-label">Email</label>
-        <input type="email" id="email" name="email" class="form-input" placeholder="email@contoh.com" required />
-        <span class="error-text">Masukkan email yang valid.</span>
-      </div>
+      <!-- DATA -->
+      <div class="right">
+        <h2 class="name">Andri</h2>
+        <p class="role">NIM : 2510614039</p>
+        <p class="role">Mahasiswa Teknik Informatika</p>
 
-      <div class="form-group">
-        <label for="password" class="form-label">Password</label>
-        <input type="password" id="password" name="password" class="form-input" placeholder="Password" required minlength="6" />
-        <span class="error-text">Password minimal 6 karakter.</span>
-      </div>
 
-      <div class="form-group">
-        <p class="form-label">Jenis Kelamin</p>
-        <label><input type="radio" name="gender" value="laki-laki" required /> Laki-laki</label>
-        <label><input type="radio" name="gender" value="perempuan" /> Perempuan</label>
-      </div>
+        <div class="grid">
+          <div class="item">
+            <p class="label">Email</p>
+            <p class="value">mrandriyt0@gmail.com</p>
+          </div>
 
-      <div class="form-group">
-        <p class="form-label">Hobi</p>
-        <label><input type="checkbox" name="hobi" value="membaca" /> Membaca</label>
-        <label><input type="checkbox" name="hobi" value="olahraga" /> Olahraga</label>
-      </div>
+          <div class="item">
+            <p class="label">No. HP/WA</p>
+            <p class="value">0895405602189</p>
+          </div>
 
-      <div class="form-group">
-        <label for="kota" class="form-label">Kota</label>
-        <select id="kota" name="kota" class="form-select" required>
-          <option value="">-- Pilih Kota --</option>
-          <option value="jakarta">Jakarta</option>
-          <option value="bandung">Bandung</option>
-          <option value="surabaya">Surabaya</option>
-        </select>
-      </div>
+          <div class="item">
+            <p class="label">Alamat</p>
+            <p class="value">Kp. Babakan Kupa, Desa Sukaluyu, Kec. Mangunreja, Kab. Tasikmalaya, Jawa Barat 46462</p>
+          </div>
 
-      <div class="form-row">
-        <div class="form-group">
-          <label for="nama_depan" class="form-label">Nama Depan</label>
-          <input type="text" id="nama_depan" name="nama_depan" class="form-input" required />
-          <span class="error-text">Nama depan wajib diisi.</span>
+          <div class="item">
+            <p class="label">Hobi</p>
+            <p class="value">Trading Forex</p>
+          </div>
         </div>
 
-        <div class="form-group">
-          <label for="nama_belakang" class="form-label">Nama Belakang</label>
-          <input type="text" id="nama_belakang" name="nama_belakang" class="form-input" required />
-          <span class="error-text">Nama belakang wajib diisi.</span>
+        <div class="about">
+          <h3>Tentang Saya</h3>
+          <p>
+            Saya adalah seorang mahasiswa Teknik Informatika di Universitas Mayasari Bakti.
+            Saat ini saya aktif mendalami informasi, mulai dari pemrograman,
+            pengembangan web. Saya tertarik pada pengembangan web dan teknologi digital.
+            Melalui pembuatan website biodata Dan Kumpulan tugas sederhana ini, saya berlatih menerapkan HTML dan CSS agar tampilan
+            lebih rapi, interaktif, dan menarik.
+          </p>
         </div>
       </div>
+    </section>
 
-      <div class="form-group">
-        <label for="umur" class="form-label">Umur</label>
-        <input type="number" id="umur" name="umur" class="form-input" min="1" max="100" step="1" required />
-        <span class="error-text">Masukkan umur 1–100.</span>
+    <section class="card" id="kontak">
+      <h3>Kontak Saya</h3>
+      <p class="muted">Klik tombol di bawah untuk menghubungi.</p>
+      <div class="actions">
+        <a class="btn" href="mailto:mrandriyto@gmail.com">Kirim Email</a>
+        <a class="btn outline" href="https://wa.me/62895405602189" target="_blank">WhatsApp</a>
       </div>
+    </section>
+  </main>
 
-      <div class="form-group">
-        <label for="tanggal" class="form-label">Tanggal Lahir</label>
-        <input type="date" id="tanggal" name="tanggal" class="form-input" required />
-        <span class="error-text">Tanggal lahir wajib diisi.</span>
-      </div>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Andri - Website Utama</p>
+    </div>
+  </footer>
 
-      <div class="form-group">
-        <label for="file" class="form-label">Upload File</label>
-        <input type="file" id="file" name="file" class="form-input" accept=".jpg,.png,.pdf" />
-      </div>
-
-      <div class="form-group">
-        <label for="warna" class="form-label">Warna Favorit</label>
-        <input type="color" id="warna" name="warna" class="form-input" value="#3498db" />
-      </div>
-
-      <div class="form-group">
-        <button type="submit" class="form-button">Daftar</button>
-      </div>
-
-      <div class="form-group">
-        <button type="reset" class="form-button secondary">Hapus</button>
-      </div>
-    </form>
-  </div>
 </body>
 </html>
